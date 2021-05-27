@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Navbar from './navbar'
 
 export const title = 'Common Sense Finance'
 
@@ -21,25 +22,7 @@ export default function Layout({ children, home }) {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header>
-                <nav class="navbar navbar-expand-md navbar-light fixed-top ">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="/">CommonSense</a>
-
-                        <div class="collapse navbar-collapse" id="navbarCollapse">
-                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Indexs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Docs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="#" >Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <Navbar />
             </header>
             <main className="container-flex">
                 {children}
