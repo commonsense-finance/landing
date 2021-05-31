@@ -1,32 +1,39 @@
 
+import dynamic from "next/dynamic";
+const ConnectWallet = dynamic(() => import("../components/ConnectWallet"), {
+  ssr: false,
+});
+
 function Navbar() {
   return (  
-    <nav class="navbar fixed-top navbar-expand-lg bg-soft-yellow ">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white" aria-label="Fourth navbar example">
     <div class="container-fluid">
-   
-      <a class="navbar-brand" href="#">COMMONSENSE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/">Common Sense</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link"href="#"> Index</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Docs</a>
           </li>
+          
         </ul>
-        <span class="navbar-text">
-        Social Icons
-        </span>
+        
+        <ConnectWallet />
+        
+        
       </div>
-    
     </div>
   </nav>
+
   )
 }
 

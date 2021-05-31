@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+
 const title = "Investing in crypto, simplified";
 const description = "We're helping normal people to have same returns as geeks through 'Index Tokens'.";
 
@@ -17,6 +18,7 @@ export default function Hero() {
             </div>
             <div className="pt-4">
               <button type="button" class="btn-lg btn-secondary text-white">Join the Private Beta</button>
+              
             </div>
 
           </div>
