@@ -7,8 +7,11 @@ import Feature02 from '../components/feature02/feature'
 import Indexs from '../components/indexs/indexs'
 import Team from '../components/team/team'
 
+import { TokenSetProvider } from '../contexts/TokenSetContext'
+
 export default function Home() {
   return (
+    <TokenSetProvider>
     <Layout home>
       <Head>
         <title>{title}</title>
@@ -19,5 +22,6 @@ export default function Home() {
       <Indexs />
       <Team />
     </Layout>
+    </TokenSetProvider>
   )
 }

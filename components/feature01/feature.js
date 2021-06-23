@@ -9,11 +9,11 @@ export default function Feature() {
   return (
     <div className="container-flex bg-soft-gray py-5">
       <div className="container">
-        <div class="row align-items-center">
-          <div class="col-sm-12 col-md-6 p-5">
+        <div className="row align-items-center">
+          <div className="col-sm-12 col-md-6 p-5">
             <Image src="/images/ilustration02.svg" height={1700} width={1700} />
           </div>
-          <div class="col-sm-12 col-md-6">
+          <div className="col-sm-12 col-md-6">
             <b>
               <h3>{strong}</h3>
             </b>

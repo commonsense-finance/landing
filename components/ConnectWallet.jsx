@@ -43,14 +43,14 @@ const ConnectWallet = () => {
 
   return (
     <>
-      <a class="nav-link btn btn-dark btn-sm mr-1" href="/profile">{signerBalance}</a>
+      <a className="nav-link btn btn-dark btn-sm mr-1" href="/profile">{signerBalance}</a>
       
-      <button type="button" class="btn btn-light btn-sm me-2"
+      <button type="button" className="btn btn-light btn-sm me-2"
         onClick={signerAddress ? handleClickAddress : handleClickConnect}>
-        <i class="bi bi-wallet"></i> {signerAddress ? truncateAddress(signerAddress) : " Connect Wallet"}
+        <i className="bi bi-wallet"></i> {signerAddress ? truncateAddress(signerAddress) : " Connect Wallet"}
       </button>
-      {signerAddress ? <a class="nav-link btn btn-dark btn-sm mr-1" href="/profile"><i class="bi bi-gear"></i></a> :
-        <a class="nav-link btn btn-dark btn-sm mr-1 disabled" href="/profile"><i class="bi bi-gear"></i></a>}
+      {signerAddress ? <a className="nav-link btn btn-dark btn-sm mr-1" href="/profile"><i className="bi bi-gear"></i></a> :
+        <a className="nav-link btn btn-dark btn-sm mr-1 disabled" href="/profile"><i className="bi bi-gear"></i></a>}
 
     </>
   );

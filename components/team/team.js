@@ -49,7 +49,7 @@ export default function Team() {
                 <p>{description}</p>
                 <div className="row py-5">
                     {persons.map((item, index) =>
-                        <div className="col-sm-12 col-md-4 py-5">
+                        <div key={index} className="col-sm-12 col-md-4 py-5">
                             <Image
                                 priority
                                 src={item.avatar}
