@@ -31,9 +31,9 @@ function Navbar() {
           
       
         </ul>
-        <form class="d-flex">
+        <form className="d-flex">
   
-  <button class="btn btn-outline-light btn-sm" type="submit">Connect</button>
+  <button className="btn btn-outline-light btn-sm" type="submit">Connect</button>
 </form>
       </div>
     </div>

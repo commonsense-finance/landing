@@ -11,29 +11,38 @@ const dataInit = {
 export const TokenSetProvider = ({children}) => {
 
     const tokenSetFundURL = 'https://api.tokensets.com/v2/funds/dpi?beta=true'
-    const [fund, setFund] = useState(dataInit)
-    const [componentes, setComponents] = useState(dataInit)
-    const [operator, setOperator] = useState(dataInit)
+    const [fund, setFund] = useState([])
 
-    const getFund = async () => {
-        try {
-            const res = await axios.get(tokenSetFundURL);
-            setFund(res.data.fund);
-            setComponents(res.data.fund.components);
-            setOperator(res.data.fund.operator);
-        } catch (error) {
-            console.log("error", error);
-            // appropriately handle the error
+    async function makeRequest() {
+        const config = {
+          method: "get",
+          url: "/v2/funds/dpi",
+        };
+    
+        const res = await axios(config);
+        setFund(res.data.fund.components);
       }
-    };
+
+    // const getFund = async () => {
+    //     try {
+    //         const res = await axios.get(tokenSetFundURL);
+    //         const data = await res.data.fund;
+    //         setFund(data);
+    //         setComponents(data.components);
+    //         setOperator(data.operator);
+    //     } catch (error) {
+    //         console.log("error", error);
+    //         // appropriately handle the error
+    //   }
+    // };
 
     useEffect(() => {
-        getFund();
+        makeRequest();
     }, [])
 
     return (
         <TokenSetContext.Provider
-            value={[fund, componentes, operator]}
+            value={[fund]}
         >
             {children}
         </TokenSetContext.Provider>

@@ -4,7 +4,7 @@ import { TokenSetContext } from "../../contexts/TokenSetContext";
 
 const Components = () => {
 
-    const components = useContext(TokenSetContext)[1];
+    const components = useContext(TokenSetContext);
 
     return (
         <table className="table table-borderless">
@@ -17,17 +17,17 @@ const Components = () => {
                 </tr>
             </thead>
             <tbody>
-                {Object.keys(components).map((item, index) =>
+                {components.map((item, index) =>
                     <tr>
-                        <td><img src={components[item].image}
+                        <td><img src={item.image}
                             width="20"
-                            class="rounded-circle me-2"
-                            alt={components[item].name}>
-                        </img> {components[item].symbol}</td>
+                            className="rounded-circle me-2"
+                            alt={item.name}>
+                        </img> {item.symbol}</td>
                         
-                        <td>{components[item].quantity}</td>
-                        <td>{components[item].total_price_usd}</td>
-                        <td>{components[item].percent_of_set}</td>
+                        <td>{item.quantity}</td>
+                        <td>{item.total_price_usd}</td>
+                        <td>{item.percent_of_set}</td>
 
                     </tr>
                 )}
