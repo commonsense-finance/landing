@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+
 const title = "Investing in crypto, simplified";
 const description = "We're helping normal people to have same returns as geeks through 'Index Tokens'.";
 

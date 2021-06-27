@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+import dynamic from "next/dynamic";
+const ConnectWallet = dynamic(() => import("../components/ConnectWallet"), {
+  ssr: false,
+});
+
 function Navbar() {
   return (  
     <nav className="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
@@ -33,6 +38,7 @@ function Navbar() {
       </div>
     </div>
   </nav>
+
   )
 }
 
