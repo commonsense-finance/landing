@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Index = ({ data = null}) => {
+const Index = ({ data }) => {
   return (
     <div>
       <table className="table">
@@ -18,7 +18,7 @@ const Index = ({ data = null}) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((d) => (
+          {data?.map((d) => (
             <tr key={d.market_cap_rank}>
               <td scope="row">{d.market_cap_rank}</td>
               <th>

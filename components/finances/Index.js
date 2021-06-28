@@ -12,7 +12,7 @@ const Index = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((d) => (
+          {data?.map((d) => (
             <tr key={d.name}>
               <td>
                 <Link href={d.website_url}>
